@@ -90,3 +90,4 @@ A notable co-movement is observed between Sydney Sweeney and American Eagle sear
 - Python (Pandas, Matplotlib)
 - Google Trends
 - Exploratory Data Analysis techniques
+- AI (only for educational purposes)
