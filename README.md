@@ -61,7 +61,7 @@ This suggests that attention is primarily concentrated on the individual rather 
 ---
 
 ## Case 2: Sydney Sweeney – American Eagle Controversy
-
+A notable co-movement is observed between Sydney Sweeney and American Eagle search interest between July 27 and August 3, 2025. During this period, both series show synchronized spikes in attention. This indicates a potential attention spillover effect, where increased interest in the celebrity is closely associated with increased interest in the brand. Unlike the Kanye–Adidas case, the effect here appears more balanced and simultaneous.
 
 ## Case 3: Dilan Polat – Influencer Scandal (Türkiye)
 
