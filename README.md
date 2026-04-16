@@ -7,7 +7,7 @@ This project analyzes how celebrity and influencer-related scandals affect publi
 The study includes three cases with different levels of severity and context:
 1. Kanye West – Adidas partnership termination
 2. Sydney Sweeney – American Eagle related public controversy
-3. Dilan Polat – Influencer scandal in Türkiye
+3. Dilan Polat – Beauty business scandal and financial controversy in Türkiye
 
 ---
 
