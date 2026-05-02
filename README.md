@@ -15,6 +15,11 @@ The study includes three cases with different levels of severity and context:
 How do different types of celebrity and influencer scandals affect brand-related search interest, and how does the impact vary across global celebrities, Hollywood actors, and social media influencers?
 
 ---
+## Hypotheses
+- H1: Celebrity scandals increase the public interest of their associated brand
+- H2: Celebrity scandals decrease the public interest of their associated brand
+- H0 (Null): Celebrity scandals have no significant relationship with the public interest of their associated brand
+---
 
 ## Data Source
 Data was collected from:
