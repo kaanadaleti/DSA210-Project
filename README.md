@@ -27,9 +27,9 @@ Data was collected from:
 - Time series data for selected keywords
 
 Keywords used:
-- Kanye West, ADIDAS, Yeezy
+- Kanye West, ADIDAS(Yeezy)
 - Sydney Sweeney, American Eagle
-- Dilan Polat, Engin Polat
+- Tiger Woods, Nike
 
 ---
 
@@ -54,7 +54,7 @@ Each scandal is analyzed using a before-and-after comparison around the event da
 ---
 
 ## Case 1: Kanye West – Adidas
-This case analyzes the termination of the Adidas–Kanye West partnership in October 2022.
+1st case analyzes the termination of the Adidas Kanye West partnership in October 2022.
 
 Findings:
 - Significant spike in search interest for Kanye West after the event.
@@ -68,8 +68,12 @@ This suggests that attention is primarily concentrated on the individual rather 
 ## Case 2: Sydney Sweeney – American Eagle Controversy
 A notable co-movement is observed between Sydney Sweeney and American Eagle search interest between July 27 and August 3, 2025. During this period, both series show synchronized spikes in attention. This indicates a potential attention spillover effect, where increased interest in the celebrity is closely associated with increased interest in the brand. Unlike the Kanye–Adidas case, the effect here appears more balanced and simultaneous.
 
-## Case 3: Dilan Polat – Influencer Scandal (Türkiye)
+## Case 3: Tiger Woods - Nike
+3rd case examines the impact of the Tiger Woods personal scandal in late 2009 on search interest for both the athlete and Nike.
+An event window (October 2009 – February 2010) is used to compare pre and post scandal behavior. The analysis includes time series visualization, correlation, and a t-test. Results show a clear spike in Tiger Woods search interest around December 2009. Nike also shows smaller fluctuations during the same period, indicating a possible spillover effect.
+However, the t-test shows no statistically significant difference in mean search interest before and after the event (p > 0.05). This suggests that while short-term attention spikes exist, the long-term impact on average interest is limited.
 
+Overall, the results indicate weak but observable co-movement between Tiger Woods and Nike during the scandal period.
 
 ## Key Findings (Cross-Case Comparison)
 
