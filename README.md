@@ -7,23 +7,30 @@ This project analyzes how celebrity and influencer-related scandals affect publi
 The study includes three cases with different levels of severity and context:
 1. Kanye West – Adidas partnership termination
 2. Sydney Sweeney – American Eagle related public controversy
-3. Dilan Polat – Beauty business scandal and financial controversy in Türkiye
+3. Tiger Woods - Nike sponsorship during personal scandal
 
 ---
 
 ## Research Question
-How do different types of celebrity and influencer scandals affect brand-related search interest, and how does the impact vary across global celebrities, Hollywood actors, and social media influencers?
+How do different types of celebrity and influencer scandals affect brand-related search interest, and how does the impact vary across global celebrities?
 
 ---
 ## Hypotheses
-- H1: Celebrity scandals increase the public interest of their associated brand
-- H2: Celebrity scandals decrease the public interest of their associated brand
-- H0 (Null): Celebrity scandals have no significant relationship with the public interest of their associated brand
+
+H1: Celebrity scandal events lead to a short term increase in public search interest for the associated brand.
+
+H2: Celebrity scandal events lead to a short-term decrease in public search interest for the associated brand.
+
+H3: The direction and magnitude of the effect vary depending on the type of celebrity, industry context, and event characteristics.
+
+H0: There is no significant change in public search interest following celebrity related scandal events.
+
 ---
 
 ## Data Source
 Data was collected from:
-- Google Trends (Worldwide / regional search interest)
+- Google Trends (Worldwide search interest)
+- Yahoo Finance
 - Time series data for selected keywords
 
 Keywords used:
@@ -37,66 +44,132 @@ Keywords used:
 
 ### 1. Data Collection
 Google Trends data was collected for each case over an event-centered time window.
+Brand stock market data from Yahoo Finance was collected over the scandal time
 
 ### 2. Event Study Approach
-Each scandal is analyzed using a before-and-after comparison around the event date.
+Each case is analyzed using an event-study framework, focusing on changes in search interest and market related variables within a defined time window (preevent vs postevent periods).
 
 ### 3. Explarotoary Data Analysis (EDA)
-- Time series visualization
+- Time series visualization of Stock Market and Google Trends
 - Spike detection around the event dates
-- Comparative trend analysis across cases
+- Cross case comparison of attention dynamics
 
 ### 4. Statistical Analysis
-- Before vs after mean comparison
-- Change in search interest levels
-- Cross-case comparison of impact magnitude
+- Preevent vs postevent mean comparison of search interest
+- Independent sample t-tests to evaluate statistical significance of changes
+- Correlation analysis between celebrity attention and brand interest
+- Comparison of effect size and direction across different cases
 
+### 5. Machine Learning Analysis
+- Linear regression to evaluate relationship strength between search interest and stock movement
+- Logistic regression for direction prediction (increase/decrease in market response)
+- Decision tree models to capture non-linear relationships
+- Evaluation using R2 , accuracy, and feature importance metrics across all 3 cases
 ---
 
 ## Case 1: Kanye West – Adidas
-1st case analyzes the termination of the Adidas Kanye West partnership in October 2022.
+The first case analyzes the termination of the Adidas–Kanye West partnership in October 2022 using Google Trends and stock market data within an event study framework.
 
-Findings:
-- Significant spike in search interest for Kanye West after the event.
+### Findings:
+- A strong and immediate spike in search interest for Kanye West is observed following the scandal event.
 - Adidas shows a moderate increase in attention.
-- Yeezy shows mixed or declining interest.
+- Yeezy related search interest exhibits mixed and unstable behavior across the event window.
 
-This suggests that attention is primarily concentrated on the individual rather than fully transferring to the brand.
+### Statistical Results:
+- Before vs after comparison shows a **statistically significant change** in mean search interest:
+  - t-statistic = 3.46
+  - p value = 0.00103
+- Linear regression results indicate **extremely weak explanatory power** :
+  - R² = 0.00115
 
----
+### Machine Learning Results:
+- Logistic Regression:
+  - Train accuracy = 0.7727
+  - Test accuracy = 0.2632
+  - Indicates strong **overfitting and weak generalization** performance.
 
-## Case 2: Sydney Sweeney – American Eagle Controversy
-A notable co-movement is observed between Sydney Sweeney and American Eagle search interest between July 27 and August 3, 2025. During this period, both series show synchronized spikes in attention. This indicates a potential attention spillover effect, where increased interest in the celebrity is closely associated with increased interest in the brand. Unlike the Kanye–Adidas case, the effect here appears more balanced and simultaneous.
-
-## Case 3: Tiger Woods - Nike
-3rd case examines the impact of the Tiger Woods personal scandal in late 2009 on search interest for both the athlete and Nike.
-An event window (October 2009 – February 2010) is used to compare pre and post scandal behavior. The analysis includes time series visualization, correlation, and a t-test. Results show a clear spike in Tiger Woods search interest around December 2009. Nike also shows smaller fluctuations during the same period, indicating a possible spillover effect.
-However, the t-test shows no statistically significant difference in mean search interest before and after the event (p > 0.05). This suggests that while short-term attention spikes exist, the long-term impact on average interest is limited.
-
-Overall, the results indicate weak but observable co-movement between Tiger Woods and Nike during the scandal period.
-
-## Key Findings (Cross-Case Comparison)
-
-- Corporate scandals (Kanye–Adidas) create strong but structured brand-level effects.
+### Interpretation:
+Although the statistical test indicates a significant short-term change in attention (p < 0.01), the regression results show that this change does not translate into a stable or predictive relationship with market behavior. The very low R² value suggests that the model explains almost none of the variance in the data, reinforcing the conclusion that attention spikes are short-term and non-predictive in nature.
 
 ---
+
+## Case 2: Sydney Sweeney – American Eagle
+The 2nd case analyzes the relationship between Sydney Sweeney related public attention and American Eagle using Google Trends and stock market data within an event study framework (July-August 2025).
+
+### Findings:
+- A clear synchronized spike is observed between Sydney Sweeney and American Eagle search interest between July 27 and August 3, 2025.
+- Unlike the Kanye case, both the celebrity and brand exhibit more balanced and simultaneous attention dynamics, indicating a potential spillover effect.
+
+### Statistical Results:
+- Before vs after comparison shows a **statistically significant change** in mean search interest:
+  - t-statistic = -12.74
+  - p-value = 0.0000002088
+- Linear regression results show **moderate explanatory power**:
+  - R2 = 0.635
+
+### Machine Learning Results:
+- Logistic/linear modeling indicates moderate predictive performance:
+  - Train accuracy = 0.875
+  - Test accuracy = 0.50
+
+### Interpretation:
+The results indicate a stronger and more structured relationship between celebrity attention and brand interest compared to the first case. The relatively high R2 suggests that a meaningful portion of variance is explained, although predictive stability remains limited in out-of-sample performance.
+
+## Case 3: Tiger Woods – Nike
+The third case analyzes the impact of Tiger Woods’ personal scandal (late 2009) on search interest and its relationship with Nike using Google Trends & Stock Market and regression analysis.
+
+An event window (October 2009 – February 2010) is used to compare preevent and postevent behavior.
+
+### Findings:
+- A clear spike in search interest for Tiger Woods is observed around the scandal period (December 2009).
+- Nike shows minor fluctuations during the same period, but the reaction is weaker compared to the other cases.
+- Overall, the relationship between Tiger Woods and Nike is less structurally pronounced.
+
+### Statistical Results:
+- Before vs after comparison:
+  - t-statistic = -1.02
+  - p-value = 0.3201
+- These results indicate **no statistically significant difference** in mean search interest before and after the event.
+
+### Machine Learning / Regression Results:
+- Linear regression results show **very weak explanatory power**:
+  - R² = 0.0504
+- Model coefficients:
+  - Coefficient = 0.000386
+  - Intercept = -0.010745
+- Logistic/ML results suggest limited predictive capability and weak generalization.
+
+### Interpretation:
+Unlike the Kanye and Sydney cases, the Tiger Woods and Nike relationship does not show statistically significant long term structural change. While short term attention spikes do exist, they dont translate into meaningful or predictive shifts in search interest or market-related behavior.
+
+## Key Findings (Cross Case Comparison)
+
+- Celebrity scandal effects are highly heterogeneous across different individuals and industries, rather than uniform or predictable.
+
+  Kanye West -> Adidas case shows strong short term attention spikes accompanied by statistically significant changes in search interest (p ≈ 0.001), but extremely weak explanatory power (R² ≈ 0.001), indicating no stable predictive relationship.
+
+ Sydney Sweeney –> American Eagle case exhibits both statistically significant effects (p ≈ 0.0000002) and moderate explanatory power (R² ≈ 0.635), suggesting a stronger and more structured attention spillover between celebrity and brand.
+
+ Tiger Woods –> Nike case shows no statistically significant long term effect (p ≈ 0.320), and weak explanatory power (R² ≈ 0.05), indicating that observed attention spikes do not translate into structural changes.
+
+- Overall, results indicate that while attention shocks are consistently observed around scandal events, their translation into measurable brand or market effects depends heavily on context, celebrity brand coupling, and event characteristics.
 
 ## Limitations
-- Google Trends reflects search interest, not actual sales or revenue (since those are private data).
-- Causal relationships cannot be fully confirmed.
-- Event timing is approximated based on public information.
 
----
+- Google Trends data captures relative search interest rather than direct economic outcomes such as sales, revenue, or market capitalization, which are not publicly available at the same granularity.
 
-## Future Work
-- Incorporating social media sentiment analysis (Twitter/Reddit)
-- Adding stock market data for financial impact
-- Expanding dataset with more international influencer cases
+- The analysis is based on observational data, meaning that causal relationships between celebrity scandals and brand/market behavior cannot be definitively established.
 
----
+- Event timing is approximated using publicly reported dates, which may introduce measurement noise in defining the exact pre and post event windows.
+
+- Machine learning models show limited generalization ability across cases, indicating that predictive performance is sensitive to feature selection and dataset structure.
 
 ## Tools Used
-- Python (Pandas, Matplotlib)
-- Google Trends
-- Exploratory Data Analysis techniques
-- AI (only for educational purposes)
+
+- Python (Pandas, NumPy, Matplotlib, Seaborn)
+- Google Trends API (via Pytrends)
+- Yahoo Finance data
+- Scikit learn (Linear Regression, Logistic Regression, Decision Trees)
+- SciPy (Statistical tests including t-test)
+- Exploratory Data Analysis (EDA) techniques
+- AI tools (used only for educational and documentation support purposes)
