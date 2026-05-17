@@ -75,10 +75,10 @@ Constructed variables for statistical and machine learning analysis:
 
 | Hypothesis | Description | Interpretation | Result |
 |------------|-------------|----------------|--------|
-| H1 | Celebrity scandal events lead to short-term increases in public search interest for associated brands | Short-term spikes in search interest are observed in all cases, especially around event periods | Partially Supported |
-| H2 | Celebrity scandal events lead to short-term decreases in public search interest depending on context | No consistent or systematic decrease in search interest is observed across cases | Not Supported |
-| H3 | The direction and magnitude of the effect vary depending on celebrity type, industry context, and event characteristics | Strong variation is observed across cases (Kanye vs Sydney vs Tiger), confirming heterogeneous effects | Supported |
-| H0 | There is no significant change in public interest following scandal events | Statistically significant changes are observed in at least some cases (e.g. Kanye, Sydney), but not all | Rejected (partially) |
+| H1 | Celebrity scandal events lead to short-term increases in public search interest for associated brands | Short term spikes in search interest are observed in all cases, especially around event periods | Partially Supported |
+| H2 | Celebrity scandal events lead to short-term decreases in public search interest depending on context | No consistent or systematic decrease in search interest is observed across cases | ❌ Not Supported |
+| H3 | The direction and magnitude of the effect vary depending on celebrity type, industry context, and event characteristics | Strong variation is observed across cases (Kanye vs Sydney vs Tiger), confirming heterogeneous effects |  ✅ Supported |
+| H0 | There is no significant change in public interest following scandal events | Statistically significant changes are observed in at least some cases (e.g. Kanye, Sydney), but not all | Partially Rejected |
 ---
 
 ## Data Source
@@ -200,27 +200,13 @@ Unlike the Kanye and Sydney cases, the Tiger Woods and Nike relationship does no
 
 - Celebrity scandal effects are highly heterogeneous across different individuals and industries, rather than uniform or predictable.
 
-  Kanye West -> Adidas case shows strong short term attention spikes accompanied by statistically significant changes in search interest (p ≈ 0.001), but extremely weak explanatory power (R² ≈ 0.001), indicating no stable predictive relationship.
+  Kanye West -> Adidas case shows strong short term attention spikes accompanied by statistically significant changes in search interest (p = 0.001), but extremely weak explanatory power (R2 = 0.001), indicating no stable predictive relationship.
 
- Sydney Sweeney –> American Eagle case exhibits both statistically significant effects (p ≈ 0.0000002) and moderate explanatory power (R² ≈ 0.635), suggesting a stronger and more structured attention spillover between celebrity and brand.
+ Sydney Sweeney –> American Eagle case exhibits both statistically significant effects (p = 0.0000002) and moderate explanatory power (R2 = 0.635), suggesting a stronger and more structured attention spillover between celebrity and brand.
 
- Tiger Woods –> Nike case shows no statistically significant long term effect (p ≈ 0.320), and weak explanatory power (R² ≈ 0.05), indicating that observed attention spikes do not translate into structural changes.
+ Tiger Woods –> Nike case shows no statistically significant long term effect (p = 0.320), and weak explanatory power (R2 = 0.05), indicating that observed attention spikes do not translate into structural changes.
 
 - Overall, results indicate that while attention shocks are consistently observed around scandal events, their translation into measurable brand or market effects depends heavily on context, celebrity brand coupling, and event characteristics.
-
-## Hypothesis Evaluation
-
-H1: Partially supported  
-Celebrity scandal events often lead to short-term increases in public search interest, but this effect is not consistent across all cases.
-
-H2: Not supported as a general rule  
-While some cases show decreases or weak effects, there is no consistent evidence of systematic short-term decrease in search interest.
-
-H3: Supported  
-The direction and magnitude of the effect vary significantly depending on the celebrity, industry context, and event characteristics.
-
-H0: Rejected in part  
-The null hypothesis of no change is rejected for cases with strong statistical significance (e.g., Kanye West and Sydney Sweeney), but not for all cases (e.g., Tiger Woods).
 
 ## Setup and Reproducibility
 
