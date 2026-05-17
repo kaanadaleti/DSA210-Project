@@ -26,6 +26,51 @@ How do different types of celebrity and influencer scandals affect brand-related
 
 ---
 
+## Data Analysis Pipeline
+
+### 1. Data Preparation
+- Collected Google Trends data for celebrity and brand keywords  
+- Collected stock market data from Yahoo Finance  
+- Aligned all datasets using a consistent event-based time window  
+- Handled missing values in time series using forward/backward filling where appropriate  
+- Standardized and normalized search interest and stock variables for comparability  
+
+---
+
+### 2. Exploratory Data Analysis (EDA)
+EDA focused on understanding temporal patterns and event-driven dynamics:
+
+- Time series visualization of search interest and stock movements  
+- Detection of spikes around scandal/event dates  
+- Pre event vs post event comparisons  
+- Cross-case comparison of attention dynamics between celebrities and brands  
+
+---
+
+### 3. Feature Construction
+Constructed variables for statistical and machine learning analysis:
+
+- Normalized search interest indices  
+- Stock return calculations  
+- Directional movement indicators (increase/decrease in interest)  
+- Lagged relationship structures for time aligned comparison  
+- Binary classification labels for logistic regression models  
+
+---
+
+### 4. Statistical Analysis
+- Pre event vs post event mean comparisons  
+- Independent sample t-tests for significance testing  
+- Correlation analysis between search interest and stock movement  
+
+---
+
+### 5. Machine Learning Models
+- Linear Regression to measure relationship strength (R2)  
+- Logistic Regression for directional prediction  
+- Decision Tree models for non-linear relationships  
+- Model evaluation using R2, accuracy, and generalization performance across cases  
+
 ## Hypotheses Summary
 
 | Hypothesis | Description | Interpretation | Result |
@@ -193,13 +238,15 @@ This project uses Python 3 and the following libraries:
 Install all dependencies using:
 ```bash
 pip install -r requirements.txt
+```
+
 
 ## Installation
 Clone the repository:
-
+```
 git clone https://github.com/kaanadaleti/DSA210-Project.git
 cd DSA210-Project
-
+```
 ## Running the Project
 
 Open the project using Jupyter Notebook or VS Code.
@@ -207,21 +254,21 @@ Open the project using Jupyter Notebook or VS Code.
 Run the notebooks in the following order:
 
 1. EDA / Analysis
-
+```
 notebooks/analysiskanye.ipynb
 notebooks/analysissydney.ipynb
 notebooks/analysistiger.ipynb
-
+```
 2. Stock Analysis
-
+```
 notebooks/stock_analysis/kanyestock.ipynb
 notebooks/stock_analysis/sydneystockgercek.ipynb
 notebooks/stock_analysis/analysistigerstock.ipynb
-
+```
 3. Machine Learning
-
+```
 notebooks/ml_analysis.ipynb
-
+```
 ## Data
 
 All datasets are included in the data/ folder.
@@ -262,6 +309,16 @@ DSA210-Project/
 - Event timing is approximated using publicly reported dates, which may introduce measurement noise in defining the exact pre and post event windows.
 
 - Machine learning models show limited generalization ability across cases, indicating that predictive performance is sensitive to feature selection and dataset structure.
+
+## AI Assistance Disclosure
+
+AI tools (including ChatGPT) were used as supportive tools during the development of this project for:
+
+- Debugging and refactoring Python code  
+- Improving visualization clarity and readability  
+- Assisting in structuring the README   
+
+All data collection, feature engineering decisions, hypothesis formulation, and final interpretations were performed by me.
 
 ## Tools Used
 
