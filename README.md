@@ -262,29 +262,31 @@ No external data collection is required to reproduce results.
 
 ## Project Structure
 
+```
 DSA210-Project/
 
-├── notebooks/
-│   ├── analysiskanye.ipynb              # Kanye West & Adidas EDA analysis
-│   ├── analysissydney.ipynb             # Sydney Sweeney & American Eagle EDA analysis
-│   ├── analysistiger.ipynb              # Tiger Woods & Nike EDA analysis
-│   ├── ml_analysis.ipynb                # Unified machine learning models
-│   │
-│   └── stock_analysis/
-│       ├── kanyestock.ipynb            # Kanye stock & trends analysis
-│       ├── sydneystockgercek.ipynb     # Sydney stock & trends analysis
-│       ├── analysistigerstock.ipynb    # Tiger Woods stock & trend analysis
+notebooks/
+├── analysiskanye.ipynb              # Kanye West - Adidas event study (EDA)
+├── analysissydney.ipynb             # Sydney Sweeney - American Eagle analysis (EDA)
+├── analysistiger.ipynb              # Tiger Woods - Nike analysis (EDA)
+├── ml_analysis.ipynb                # Machine learning models across all cases
 │
-├── data/
-│   ├── adidas_kanye_yeezy_trends.csv
-│   ├── SydneyAmerican.csv
-│   ├── tigerwoods.csv
-│
-├── figures/
-│
-├── README.md
-├── .gitignore
-└── dsa210 project proposal.pdf
+└── stock_analysis/                  # Stock market focused analyses
+    ├── kanyestock.ipynb            # Kanye West stock & trend analysis
+    ├── sydneystockgercek.ipynb     # Sydney Sweeney stock analysis
+    ├── analysistigerstock.ipynb    # Tiger Woods stock analysis
+
+data/
+├── adidas_kanye_yeezy_trends.csv   # Google Trends data (Kanye case)
+├── SydneyAmerican.csv              # Google Trends data (Sydney case)
+├── tigerwoods.csv                  # Google Trends data (Tiger Woods case)
+
+figures/                            # All generated plots and visualizations
+
+README.md                           # Project documentation
+.gitignore                          # Ignored files
+dsa210 project proposal.pdf         # Initial project proposal
+```
 
 ## Limitations
 
