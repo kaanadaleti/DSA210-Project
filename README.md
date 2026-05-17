@@ -25,16 +25,15 @@ The study includes three cases with different levels of severity and context:
 How do different types of celebrity and influencer scandals affect brand-related search interest, and how does the impact vary across global celebrities?
 
 ---
-## Hypotheses
 
-H1: Celebrity scandal events lead to a short term increase in public search interest for the associated brand.
+## Hypotheses Summary
 
-H2: Celebrity scandal events lead to a short-term decrease in public search interest for the associated brand.
-
-H3: The direction and magnitude of the effect vary depending on the type of celebrity, industry context, and event characteristics.
-
-H0: There is no significant change in public search interest following celebrity related scandal events.
-
+| Hypothesis | Description | Interpretation | Result |
+|------------|-------------|----------------|--------|
+| H1 | Celebrity scandal events lead to short-term increases in public search interest for associated brands | Short-term spikes in search interest are observed in all cases, especially around event periods | Partially Supported |
+| H2 | Celebrity scandal events lead to short-term decreases in public search interest depending on context | No consistent or systematic decrease in search interest is observed across cases | Not Supported |
+| H3 | The direction and magnitude of the effect vary depending on celebrity type, industry context, and event characteristics | Strong variation is observed across cases (Kanye vs Sydney vs Tiger), confirming heterogeneous effects | Supported |
+| H0 | There is no significant change in public interest following scandal events | Statistically significant changes are observed in at least some cases (e.g. Kanye, Sydney), but not all | Rejected (partially) |
 ---
 
 ## Data Source
@@ -177,6 +176,82 @@ The direction and magnitude of the effect vary significantly depending on the ce
 
 H0: Rejected in part  
 The null hypothesis of no change is rejected for cases with strong statistical significance (e.g., Kanye West and Sydney Sweeney), but not for all cases (e.g., Tiger Woods).
+
+## Setup and Reproducibility
+
+### Requirements
+This project uses Python 3 and the following libraries:
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- scipy
+- yfinance
+- pytrends
+
+Install all dependencies using:
+```bash
+pip install -r requirements.txt
+
+## Installation
+Clone the repository:
+
+git clone https://github.com/kaanadaleti/DSA210-Project.git
+cd DSA210-Project
+
+## Running the Project
+
+Open the project using Jupyter Notebook or VS Code.
+
+Run the notebooks in the following order:
+
+1. EDA / Analysis
+
+notebooks/analysiskanye.ipynb
+notebooks/analysissydney.ipynb
+notebooks/analysistiger.ipynb
+
+2. Stock Analysis
+
+notebooks/stock_analysis/kanyestock.ipynb
+notebooks/stock_analysis/sydneystockgercek.ipynb
+notebooks/stock_analysis/analysistigerstock.ipynb
+
+3. Machine Learning
+
+notebooks/ml_analysis.ipynb
+
+## Data
+
+All datasets are included in the data/ folder.
+No external data collection is required to reproduce results.
+
+## Project Structure
+
+DSA210-Project/
+
+├── notebooks/
+│   ├── analysiskanye.ipynb              # Kanye West & Adidas EDA analysis
+│   ├── analysissydney.ipynb             # Sydney Sweeney & American Eagle EDA analysis
+│   ├── analysistiger.ipynb              # Tiger Woods & Nike EDA analysis
+│   ├── ml_analysis.ipynb                # Unified machine learning models
+│   │
+│   └── stock_analysis/
+│       ├── kanyestock.ipynb            # Kanye stock & trends analysis
+│       ├── sydneystockgercek.ipynb     # Sydney stock & trends analysis
+│       ├── analysistigerstock.ipynb    # Tiger Woods stock & trend analysis
+│
+├── data/
+│   ├── adidas_kanye_yeezy_trends.csv
+│   ├── SydneyAmerican.csv
+│   ├── tigerwoods.csv
+│
+├── figures/
+│
+├── README.md
+├── .gitignore
+└── dsa210 project proposal.pdf
 
 ## Limitations
 
