@@ -1,6 +1,16 @@
 # DSA210-Project
 # Celebrity & Influencer Scandals and Their Impact on Brand Interest
 
+## Motivation
+
+Celebrity culture plays a significant role in shaping public attention and consumer behavior in modern digital environments. Scandals and viral moments involving public figures often generate rapid shifts in online engagement, which may indirectly influence brand perception and financial outcomes.
+
+I was particularly interested in how recent cases such as the Sydney Sweeney American Eagle attention dynamics highlighted noticeable changes in public interest patterns, especially when compared to KATSEYE’s brand partnership activity with GAP Denim.
+
+These contrasting cases raised a key question: whether such attention movements are purely short term social media effects or whether they can be systematically observed and potentially linked to measurable changes in brand related behavior.
+
+By combining Google Trends data with stock market information, I aim to explore the relationship between public attention and market dynamics across different types of celebrity-brand interactions.
+
 ## Project Overview
 This project analyzes how celebrity and influencer-related scandals affect public interest in associated brands using Google Trends data. The goal is to compare different types of scandals and measure how search behavior changes before and after major events.
 
@@ -153,6 +163,20 @@ Unlike the Kanye and Sydney cases, the Tiger Woods and Nike relationship does no
  Tiger Woods –> Nike case shows no statistically significant long term effect (p ≈ 0.320), and weak explanatory power (R² ≈ 0.05), indicating that observed attention spikes do not translate into structural changes.
 
 - Overall, results indicate that while attention shocks are consistently observed around scandal events, their translation into measurable brand or market effects depends heavily on context, celebrity brand coupling, and event characteristics.
+
+## Hypothesis Evaluation
+
+H1: Partially supported  
+Celebrity scandal events often lead to short-term increases in public search interest, but this effect is not consistent across all cases.
+
+H2: Not supported as a general rule  
+While some cases show decreases or weak effects, there is no consistent evidence of systematic short-term decrease in search interest.
+
+H3: Supported  
+The direction and magnitude of the effect vary significantly depending on the celebrity, industry context, and event characteristics.
+
+H0: Rejected in part  
+The null hypothesis of no change is rejected for cases with strong statistical significance (e.g., Kanye West and Sydney Sweeney), but not for all cases (e.g., Tiger Woods).
 
 ## Limitations
 
